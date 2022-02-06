@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3418611458697652572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7914692990280157471}
+  - component: {fileID: 1905232276672298674}
+  m_Layer: 0
+  m_Name: 1!.001(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7914692990280157471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418611458697652572}
+  m_LocalRotation: {x: -0.54603237, y: -0.0000000021724003, z: -3.620688e-11, w: 0.8377641}
+  m_LocalPosition: {x: 0.019625055, y: -0.8809342, z: -0.21913627}
+  m_LocalScale: {x: 1.9189771, y: 1.9189771, z: 1.9189771}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &1905232276672298674
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418611458697652572}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -3846018093981099296, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 3493940592680710354, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  m_Bones:
+  - {fileID: -5671910290767253545, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -8069032694317455793, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 7829577706673091268, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -6881390770214846263, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 9140253385185518857, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 7208261743932278219, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 6039136598254185236, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -5538751756592888872, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -8028729752870558221, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -8884984920518210719, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 6734931530170869177, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 7995179518529311369, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 3812702128279385500, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 8957272431402484473, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -1878338096449427408, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 6060806385407736488, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -8833805373484061153, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 2408001348110326286, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 2987437885464668138, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -8142028300753827730, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 3609993276688618807, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -5567499957886489658, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -8557096260062191384, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 6552740704638146547, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 6689410216127065466, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -93930055594326295, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 3733205469430099604, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -3302972225415322985, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 4582277379452294679, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 2838391200542782613, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 2412161367050800168, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 7789981938002673349, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -3225744230849817767, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 2544483624133551955, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 9199402762043059086, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -2709793182783671460, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -774485609497688880, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 493698198569549626, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 3393154777153272488, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -3660331089067622499, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -268392281304424305, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -334865692907750848, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -3168827572137891786, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -2058936242603852060, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -574607911634951530, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -4192491875905271157, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 7147775673956413065, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -2593687625098271875, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -6063354155749413847, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -484974042906411496, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 6110471695799780156, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 3209660629809869843, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -5738099386740791124, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 6250409095508506177, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 4330094614076497766, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: -5756552144314822023, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  - {fileID: 899914987519988528, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: -5671910290767253545, guid: 91af190f506c5af4fa4cf83122b4a216,
+    type: 3}
+  m_AABB:
+    m_Center: {x: 0.032254577, y: -0.14104354, z: -0.1096915}
+    m_Extent: {x: 0.9530148, y: 1.005541, z: 1.2546409}
+  m_DirtyAABB: 0
