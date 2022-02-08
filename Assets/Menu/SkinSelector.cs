@@ -55,7 +55,7 @@ public class SkinSelector : MonoBehaviour
         {
             saveSkin.gameObject.SetActive(false);
             buy.gameObject.SetActive(true);
-            priceText.text = "Купить за " + skinPrices[currentSkin] + "$";
+            priceText.text = "Купить за " + skinPrices[currentSkin];
         }
     }
 
