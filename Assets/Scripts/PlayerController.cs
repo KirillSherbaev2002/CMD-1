@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public Animator JumpMoveUp;
     public Animator JumpAnimation;
+    public AudioSource movingHorizontal;
 
     [SerializeField] BoxCollider _bc;
 
@@ -54,6 +55,8 @@ public class PlayerController : MonoBehaviour
     {
         if (_playerTransform.localPosition.x < _defaultX || !_isCorutineComplited)return;
         Vector3 localPosition = transform.localPosition;
+        JumpMoveUp.SetTrigger("LeftMove");
+        movingHorizontal.Play();
         StartCoroutine(MoveHorizontal(false, localPosition.x - movementHorizontalValue));
     }
     
@@ -61,12 +64,14 @@ public class PlayerController : MonoBehaviour
     {
         if (_playerTransform.localPosition.x > _defaultX || !_isCorutineComplited) return;
         Vector3 localPosition = transform.localPosition;
+        JumpMoveUp.SetTrigger("RightMove");
+        movingHorizontal.Play();
         StartCoroutine(MoveHorizontal(true, localPosition.x + movementHorizontalValue));
     }
 
     private void TrySwipeUp()
     {
-        JumpMoveUp.SetTrigger("Jump");
+        //JumpMoveUp.SetTrigger("Jump");
         JumpAnimation.SetTrigger("Jump");
         StartCoroutine(DisableCollider());
     }
@@ -75,7 +80,7 @@ public class PlayerController : MonoBehaviour
     {
         GetComponentInChildren<AudioSource>().volume = 0;
         _bc.enabled = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.8f);
         GetComponentInChildren<AudioSource>().volume = 0.06f;
         _bc.enabled = true;
         yield break;
@@ -89,6 +94,8 @@ public class PlayerController : MonoBehaviour
     private void Roll()
     {
         JumpAnimation.SetTrigger("Roll");
+        movingHorizontal.Play();
+        StartCoroutine(DisableCollider());
     }
 
     private IEnumerator MoveHorizontal(bool isRight, float neededX)

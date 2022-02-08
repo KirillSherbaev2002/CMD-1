@@ -7,6 +7,10 @@ TagManager:
   - Obsticle
   - Enemy
   - Probirka
+  - FxTemporaire
+  - ProbirkaToCatch
+  - VirusThrown
+  - BossTrigger
   layers:
   - Default
   - TransparentFX

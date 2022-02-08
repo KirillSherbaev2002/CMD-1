@@ -13,24 +13,25 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] GameObject playerMesh;
     [SerializeField] AudioSource boomSound;
 
-
     public SplineFollower splineFollower;
+    public SplineFollower splineFollowerBoss;
     public SplineComputer splineComputer;
     public SplineProjector splineProjector;
+    public HealthController healthController;
+    public CatchController catchController;
 
     [Header("Material")]
     public Material[] materials;
     public GameObject tiger;
 
     [Header("Level")]
-    public Text scoreOnWay;
     public int sceneToLoad;
     public int segmentToLoad;
 
-    [SerializeField] private float[] rotationForYOnStage;
-    private float nextPercent;
-    private float currentPercent;
-    private int currentPointIndex = 0;
+    public float[] rotationForYOnStage;
+    public float nextPercent;
+    public float currentPercent;
+    public int currentPointIndex = 0;
     private bool isTheLastSegment = false;
 
     [Header("GoDown")]
@@ -40,6 +41,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float cameraGoDown;
     [SerializeField] private float characterGoDown;
 
+    public Action collision;
+
     private void Start()
     {
         int currentIndex = PlayerPrefs.GetInt("material");
@@ -48,29 +51,48 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.CompareTag("BossTrigger"))
+        {
+            return;
+        }
         var particles = Instantiate(boomParticle, other.transform.position, Quaternion.identity);
 
         if (other.gameObject.CompareTag("Obsticle"))
         {
-
-            StartCoroutine(Death());
+            collision();
         }
         if (other.gameObject.CompareTag("Enemy"))
         {
-            StartCoroutine(Death());
+            collision();
         }
     }
 
-    private IEnumerator Death()
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("ProbirkaToCatch"))
+        {
+            Destroy(other.gameObject);
+            transform.parent.transform.parent.GetComponent<CatchController>().OnProbirkaCatched();
+        }
+    }
+
+    public IEnumerator Death()
     {
         boomSound.Play();
         playerMesh.GetComponent<AudioSource>().volume = 0;
+
         splineFollower.enabled = false;
+        splineFollowerBoss.enabled = false;
+
         playerMesh.GetComponent<Animator>().SetTrigger("Dead");
         yield return new WaitForSeconds(1.5f);
         playerMesh.GetComponent<AudioSource>().volume = 0.06f;
+
         splineFollower.enabled = true;
         splineFollower.SetPercent(0);
+        splineFollowerBoss.SetPercent(0);
+
+        OnPlayerSwitchTrajectory();
         SetBack();
         print("Death");
         yield break;
@@ -112,25 +134,27 @@ public class PlayerInteraction : MonoBehaviour
 
         ScoreScript score = FindObjectOfType<ScoreScript>();
         score.SetToZero();
+        Quaternion.Euler(0, rotationForYOnStage[currentPointIndex], 0);
     }
 
     private void FixedUpdate()
     {
         currentPercent = (float) splineProjector.result.percent;
         OnPlayerSwitchTrajectory();
-        scoreOnWay.text = "Line "+ currentPointIndex.ToString();
         CheckOnEnd();
     }
 
     public void SetToFastMode()
     {
         splineFollower.followSpeed = 50f;
+        splineFollowerBoss.followSpeed = 50f;
         GetComponent<BoxCollider>().isTrigger = true;
     }
 
     public void SetNormalMode()
     {
-        splineFollower.followSpeed = 16f;
+        splineFollower.followSpeed = 18f;
+        splineFollowerBoss.followSpeed = 18f;
         GetComponent<BoxCollider>().isTrigger = false;
     }
 

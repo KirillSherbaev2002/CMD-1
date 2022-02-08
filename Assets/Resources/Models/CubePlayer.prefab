@@ -51,6 +51,7 @@ MonoBehaviour:
   speedOfUpdatesForMovement: 0.0003
   JumpMoveUp: {fileID: 1418645252752966250}
   JumpAnimation: {fileID: 1418645251928989761}
+  _bc: {fileID: 0}
 --- !u!114 &1418645251486131470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3806582a6ecac3d42821bbfcdfdd8232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boomParticle: {fileID: 0}
+  playerController: {fileID: 0}
+  playerMesh: {fileID: 0}
+  boomSound: {fileID: 0}
   splineFollower: {fileID: 0}
   splineComputer: {fileID: 0}
   splineProjector: {fileID: 0}
@@ -309,6 +314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: '!Tiger'
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91af190f506c5af4fa4cf83122b4a216,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91af190f506c5af4fa4cf83122b4a216, type: 3}

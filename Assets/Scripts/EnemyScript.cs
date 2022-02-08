@@ -5,16 +5,23 @@ using System;
 
 public class EnemyScript : MonoBehaviour
 {
+    public AudioSource audioSource;
     private GameObject PastProbirka;
+    public GameObject EffectCloud;
     private bool isPossible;
 
     private void OnMouseDown()
     {
         CatchController catchObject = FindObjectOfType<CatchController>();
 
-        if(Vector3.Distance(catchObject.gameObject.transform.position, gameObject.transform.position) < catchObject.probirkaDistance)
+        if (Vector3.Distance(catchObject.gameObject.transform.position, gameObject.transform.position) < catchObject.probirkaDistance)
         {
-            GameObject probirka =Instantiate(catchObject.Probirka, catchObject.gameObject.transform.position, catchObject.gameObject.transform.rotation);
+            if (catchObject.countProbirka <= 0)
+            {
+                return;
+            }
+            catchObject.OnProbirkaMinus();
+            GameObject probirka = Instantiate(catchObject.Probirka, catchObject.gameObject.transform.position, catchObject.gameObject.transform.rotation);
             Vector3 targetDirection = transform.position - catchObject.gameObject.transform.position;
             probirka.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(targetDirection * catchObject.forceToAd);
         }
@@ -26,6 +33,8 @@ public class EnemyScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Probirka")
         {
+            audioSource.Play();
+            Instantiate(EffectCloud, new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z), transform.rotation);
             gameObject.SetActive(false);
             var probirki = GameObject.FindGameObjectsWithTag("Probirka");
             foreach (GameObject probirka in probirki)

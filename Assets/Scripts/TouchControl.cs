@@ -7,9 +7,9 @@ public class TouchControl : MonoBehaviour
 {
     private Vector2 _swipeStart;
     private Vector2 _swipeEnd;
-    private const float SwipeToScreenWidth = 16;
+    private const float SwipeToScreenWidth = 22;
     private const float SwipeWValue = 150;
-    private const float SwipeToScreenHeight = 16;
+    private const float SwipeToScreenHeight = 22;
     private const float SwipeYValue = 300;
 
     public event Action SwipeRight;
@@ -26,7 +26,7 @@ public class TouchControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Input.touchCount >= 1 || Input.GetMouseButton(0))
+        if (Input.touchCount >= 1 || Input.GetMouseButton(0))
         {
             if (!isTouchedStarts)
             {
@@ -60,7 +60,7 @@ public class TouchControl : MonoBehaviour
             }
         }
 
-        if(Vector2.Distance(_swipeStart, _swipeEnd) >= Screen.width / SwipeToScreenHeight)
+        if (Vector2.Distance(_swipeStart, _swipeEnd) >= Screen.width / SwipeToScreenHeight)
         {
             if (_swipeStart.y + SwipeYValue < _swipeEnd.y)
             {
