@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: a1750b9d5d0c93948b0a2595043a40bd
   - enabled: 1
     path: Assets/Scenes/City.unity
-    guid: 5fe16ae9e1f5d2c42a2286b7369be6a6
+    guid: d41f2d928e86a9d44a1397924bc4a8ea
   - enabled: 1
     path: Assets/Scenes/Park.unity
     guid: 08d5ef7a4990b2e4f8353c6ba83354e1
