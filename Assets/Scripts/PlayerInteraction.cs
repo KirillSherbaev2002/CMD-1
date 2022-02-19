@@ -72,7 +72,7 @@ public class PlayerInteraction : MonoBehaviour
         if (other.gameObject.CompareTag("ProbirkaToCatch"))
         {
             Destroy(other.gameObject);
-            transform.parent.transform.parent.GetComponent<CatchController>().OnProbirkaCatched();
+            catchController.OnProbirkaCatched();
         }
     }
 

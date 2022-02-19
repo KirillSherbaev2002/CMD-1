@@ -95,7 +95,6 @@ public class PlayerController : MonoBehaviour
     {
         JumpAnimation.SetTrigger("Roll");
         movingHorizontal.Play();
-        StartCoroutine(DisableCollider());
     }
 
     private IEnumerator MoveHorizontal(bool isRight, float neededX)
